@@ -1,0 +1,88 @@
+#search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--search-background);
+    color: var(--text-color);
+    outline: none; /* Remove default outline */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+#search-input:focus {
+    border-color: #8a4fff; /* Purple border color */
+    box-shadow: 0 0 8px rgba(138, 79, 255, 0.3); /* Soft purple glow */
+    transform: scale(1.01); /* Slight scale animation on focus */
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.question {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-color);
+    position: relative;
+    padding-right: 30px;
+}
+
+.question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.question.active::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    color: var(--secondary-text-color);
+}
+
+.answer.show {
+    display: block;
+}
+
+.answer h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+.answer h2 {
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+.answer strong {
+    color: var(--text-color);
+}
+
+.gray-background {
+    background-color: var(--gray-background-color);
+    color: var(--gray-background-text-color);
+    padding: 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-image {
+    display: block;           /* Make the image a block-level element */
+    max-width: 600px;         /* Set the max width for the image */
+    margin-right: auto;       /* Automatically adjust right margin */
+    margin-left: auto;        /* Automatically adjust left margin */
+}
+
+
+
+
+

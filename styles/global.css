@@ -1,0 +1,94 @@
+/* Initially hide content */
+:root {
+    /* Light Theme Colors */
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --secondary-text-color: #666666;
+    --border-color: #dddddd;
+    --search-background: #f4f4f4;
+    --active-color: #f0f0f0;
+
+    /* Gray Background */
+    --gray-background-color: #f0f0f0;
+    --gray-background-text-color: #333333;
+
+    /* Link Colors (Purple) */
+    --link-color: #9b4dca; /* Light purple link color */
+    --link-hover-color: #7a2f99; /* Darker purple when hovered */
+    --link-active-color: #5a1f75; /* Even darker purple when active */
+}
+
+.dark-theme {
+    /* Dark Theme Colors */
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #a0a0a0;
+    --border-color: #333333;
+    --search-background: #2a2a2a;
+    --active-color: #333333;
+
+    /* Gray Background */
+    --gray-background-color: #333333;
+    --gray-background-text-color: #e0e0e0;
+
+    /* Link Colors for Dark Theme (Purple) */
+    --link-color: #bb66cc; /* Lighter purple link color for dark theme */
+    --link-hover-color: #9b4dca; /* Medium purple on hover for dark theme */
+    --link-active-color: #7a2f99; /* Darker purple for active links */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+
+body {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s ease;
+}
+
+/* Once the theme is set, make the body visible */
+body.theme-loaded {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+/* Link Styles */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+a:active {
+    color: var(--link-active-color);
+}
+
+
+
+
+
